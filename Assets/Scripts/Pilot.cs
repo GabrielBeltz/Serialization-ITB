@@ -6,11 +6,12 @@ public class Pilot : StorageItem
 {
     public int totalXP;
     public pilotLevelUpSkills pilotLevelUp1, pilotLevelUp2;
+    public PilotSpecialSkills specialSkill;
 }
 
 public enum pilotLevelUpSkills
 {
-    gridDef, hp, move, reactor
+    none, gridDef, hp, move, reactor
 }
 
 public enum PilotSpecialSkills
