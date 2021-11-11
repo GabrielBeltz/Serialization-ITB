@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Run
+[CreateAssetMenu(fileName = "New Run", menuName = "Run", order = 51)]
+public class Run : ScriptableObject
 {
     public Squad selectedSquad;
     public List<StorageItem> inventory = new List<StorageItem>();

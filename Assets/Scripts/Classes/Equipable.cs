@@ -2,16 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Equipable", menuName = "Equipable", order = 56)]
 public class Equipable : StorageItem
 {
+    public bool active;
     public int power;
+    public string description;
     public EquipableUpgrade upgrade1, upgrade2;
 }
 
+[System.Serializable]
 public class EquipableUpgrade
 {
+    public bool active;
     public UpgradeTypes type;
     public int cost;
+    public string description;
+
+    public EquipableUpgrade(UpgradeTypes type, int cost)
+    {
+        this.cost = cost;
+        this.type = type;
+    }
 }
 
 public enum UpgradeTypes

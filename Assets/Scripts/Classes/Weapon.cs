@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Weapon", menuName = "Weapon", order = 52)]
+[System.Serializable]
 public class Weapon : Usable
 {
     public Damage damage;
-    public int range;
-    public string description;
     public WeaponType type;
 }
 

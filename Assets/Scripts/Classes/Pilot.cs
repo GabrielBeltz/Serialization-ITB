@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[CreateAssetMenu(fileName = "New Pilot", menuName = "Pilot", order = 54)]
 public class Pilot : StorageItem
 {
     public int totalXP;
