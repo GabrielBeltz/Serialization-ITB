@@ -806,10 +806,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInfo: {fileID: 345039732}
-  storageItem0: {fileID: 11400000, guid: 8c84c1de173abb3458fd887058cafa2e, type: 2}
-  weapon0: {fileID: 11400000, guid: 89e89e95af70d6a4b904f236accbb7aa, type: 2}
-  passive0: {fileID: 11400000, guid: 4ac0e57f36ea922429c5de53d8a5ad88, type: 2}
-  pilot0: {fileID: 11400000, guid: b413184dfa6e4784cabdcd151d131047, type: 2}
+  storageItems:
+  - {fileID: 11400000, guid: 5e2e78440ad191f4684441580f7c811d, type: 2}
+  - {fileID: 11400000, guid: 7505df7c5c4e67144add1c12f635d150, type: 2}
+  - {fileID: 11400000, guid: 57d66ae76751695439a6c8f78cd9c5bf, type: 2}
+  - {fileID: 11400000, guid: 405b348a80dde2749b6fd86db77554cd, type: 2}
+  - {fileID: 11400000, guid: ef339b064e0c1c04e8a61789331c23c3, type: 2}
+  - {fileID: 11400000, guid: edd32cb03b228b1439a17e4d281690ce, type: 2}
+  - {fileID: 11400000, guid: ad7cbe711e83a504881b2639c40efe53, type: 2}
+  - {fileID: 11400000, guid: ed7c51f537774d54c989d61a777ce194, type: 2}
+  - {fileID: 11400000, guid: 6d60d70d520674049944dec9e351d8be, type: 2}
+  storagePilots: []
+  storageWeapons: []
+  storagePassives: []
+  save: {fileID: 11400000, guid: 856a79ee6bc25c1419f411ca46bd784b, type: 2}
 --- !u!4 &1704939726
 Transform:
   m_ObjectHideFlags: 0

@@ -1,34 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using System.IO;
 
 public class JsonWorker : MonoBehaviour
 {
     public GameInfoSetter gameInfo;
-    public StorageItem storageItem0;
-    public Weapon weapon0;
-    public Passive passive0;
-    public Pilot pilot0;
+    public StorageItem[] storageItems;
+    public Pilot[] storagePilots;
+    public Weapon[] storageWeapons;
+    public Passive[] storagePassives;
+    public Run save;
+    Run tempRun;
+    string pDataP;
+
+    public void Awake()
+    {
+        tempRun = Run.CreateInstance("Run") as Run;
+        pDataP = Application.persistentDataPath;
+    }
 
     public void LoadSave()
     {
-        File.ReadAllText(Application.persistentDataPath + "/Mech" + 1.ToString() + ".json");
-        JsonUtility.FromJsonOverwrite(File.ReadAllText(Application.persistentDataPath + "/InventoryItem0.json"), storageItem0);
+        JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Run.json"), tempRun);
+        save.inventory.Clear();
 
-        switch (storageItem0.storageType)
+        // Load Inventário
+        for (int i = 0; i < tempRun.inventory.Count; i++)
         {
-            case storageType.pilot:
-                JsonUtility.FromJsonOverwrite(File.ReadAllText(Application.persistentDataPath + "/InventoryItem0.json"), pilot0);
-                break;
-            case storageType.passive:
-                JsonUtility.FromJsonOverwrite(File.ReadAllText(Application.persistentDataPath + "/InventoryItem0.json"), passive0);
-                break;
-            case storageType.weapon:
-                JsonUtility.FromJsonOverwrite(File.ReadAllText(Application.persistentDataPath + "/InventoryItem0.json"), weapon0);
-                break;
-            default:
-                break;
+            JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/InventoryItem{i}.json"), storageItems[i]);
+            switch (storageItems[i].storageType)
+            {
+                case storageType.pilot:
+                    JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/InventoryItem{i}.json"), storagePilots[i]);
+                    storageItems[i] = storagePilots[i];
+                    break;
+                case storageType.passive:
+                    JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/InventoryItem{i}.json"), storagePassives[i]);
+                    storageItems[i] = storagePassives[i];
+                    break;
+                case storageType.weapon:
+                    JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/InventoryItem{i}.json"), storageWeapons[i]);
+                    storageItems[i] = storageWeapons[i];
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -39,6 +57,8 @@ public class JsonWorker : MonoBehaviour
         //StreamWriter sw =  File.CreateText(dataPath);
         //sw.Close();
         //File.WriteAllText(dataPath, json);
+
+        SaveRun(gameInfo.baseRunToSave);
 
         for (int i = 0; i < gameInfo.baseRunToSave.selectedSquad.Mechs.Length; i++)
         {
@@ -79,19 +99,28 @@ public class JsonWorker : MonoBehaviour
         }
     }
 
-    void SaveMech(Mech mech, int index)
+    void SaveRun(Run run)
     {
-        string json = JsonUtility.ToJson(mech, true);
-        string dataPath = Application.persistentDataPath + "/Mech" + index.ToString() + ".json";
+        string json = JsonUtility.ToJson(run, true);
+        string dataPath = $"{pDataP}/Run.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
     }
 
-    void SaveMechPilot(Pilot pilot, int index)
+    void SaveMech(Mech mech, int i)
+    {
+        string json = JsonUtility.ToJson(mech, true);
+        string dataPath = $"{pDataP}/Mech{i}.json";
+        StreamWriter sw = File.CreateText(dataPath);
+        sw.Close();
+        File.WriteAllText(dataPath, json);
+    }
+
+    void SaveMechPilot(Pilot pilot, int i)
     {
         string json = JsonUtility.ToJson(pilot, true);
-        string dataPath = Application.persistentDataPath + "/Mech" + index.ToString() + "Pilot.json";
+        string dataPath = $"{pDataP}/Mech{i}Pilot.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
@@ -100,7 +129,7 @@ public class JsonWorker : MonoBehaviour
     void SaveWeapon(Equipable mechEquip, int mechIndex, int weaponIndex)
     {
         string json = JsonUtility.ToJson(mechEquip as Weapon, true);
-        string dataPath = Application.persistentDataPath + "/Mech" + mechIndex.ToString() + "Equipable" + weaponIndex.ToString() + ".json";
+        string dataPath = $"{pDataP}/Mech{mechIndex}Equipable{weaponIndex}.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
@@ -109,34 +138,34 @@ public class JsonWorker : MonoBehaviour
     void SavePassive(Equipable mechEquip, int mechIndex, int weaponIndex)
     {
         string json = JsonUtility.ToJson(mechEquip as Passive, true);
-        string dataPath = Application.persistentDataPath + "/Mech" + mechIndex.ToString() + "Equipable" + weaponIndex.ToString() + ".json";
+        string dataPath = $"{pDataP}/Mech{mechIndex}Equipable{weaponIndex}.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
     }
 
-    void SaveInventoryPilot(StorageItem item, int index)
+    void SaveInventoryPilot(StorageItem item, int i)
     {
         string json = JsonUtility.ToJson(item as Pilot, true);
-        string dataPath = Application.persistentDataPath + "/InventoryItem" + index.ToString() + ".json";
+        string dataPath = $"{pDataP}/InventoryItem{i}.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
     }
 
-    void SaveInventoryPassive(StorageItem item, int index)
+    void SaveInventoryPassive(StorageItem item, int i)
     {
         string json = JsonUtility.ToJson(item as Passive, true);
-        string dataPath = Application.persistentDataPath + "/InventoryItem" + index.ToString() + ".json";
+        string dataPath = $"{pDataP}/InventoryItem{i}.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
     }
 
-    void SaveInventoryWeapon(StorageItem item, int index)
+    void SaveInventoryWeapon(StorageItem item, int i)
     {
         string json = JsonUtility.ToJson(item as Weapon, true);
-        string dataPath = Application.persistentDataPath + "/InventoryItem" + index.ToString() + ".json";
+        string dataPath = $"{pDataP}/InventoryItem{i}.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);
