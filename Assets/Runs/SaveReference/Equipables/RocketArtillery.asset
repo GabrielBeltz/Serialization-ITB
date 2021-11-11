@@ -27,6 +27,7 @@ MonoBehaviour:
     type: 1
     cost: 2
     description: Increases damage by 1.
+  equipableType: 1
   uses: -1
   damage:
     value: 2

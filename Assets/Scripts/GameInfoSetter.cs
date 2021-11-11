@@ -6,5 +6,23 @@ public class GameInfoSetter : MonoBehaviour
 {
     public bool rustingHulks;
 
-    public Run baseRunToSave;
+    public Run baseRunToSave
+    {
+        get
+        {
+            if (rustingHulks)
+            {
+                return RustingHulksRun;
+            }
+            else
+            {
+                return customRun;
+            }
+        }
+        protected set
+        {
+        }
+    }
+    public Run RustingHulksRun;
+    public Run customRun;
 }

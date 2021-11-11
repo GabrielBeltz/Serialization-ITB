@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Run
   m_EditorClassIdentifier: 
   selectedSquad:
-    type: 0
-    price: 0
+    type: 1
+    price: 4
     unlocked: 0
     color: {r: 0, g: 0, b: 0, a: 0}
     Mechs:
@@ -38,7 +38,7 @@ MonoBehaviour:
       fireImmunity: 0
       mechEquip:
       - {fileID: 11400000, guid: 7f0cbb27bdfd007458e875819052691c, type: 2}
-      - {fileID: 0}
+      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
       pilot: {fileID: 11400000, guid: 19a9d046629b2274d8e41d8e9d7abb40, type: 2}
     - name: Pulse Mech
       category: 4
@@ -49,7 +49,7 @@ MonoBehaviour:
       fireImmunity: 0
       mechEquip:
       - {fileID: 11400000, guid: cde1ce9712d47d14bae43456f797d0f7, type: 2}
-      - {fileID: 0}
+      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
       pilot: {fileID: 11400000, guid: 9744722d02ea1c8458890314965b39ca, type: 2}
     easyWin2Islands: 1
     easyWin3Islands: 1
@@ -59,7 +59,7 @@ MonoBehaviour:
     mediumWin4Islands: 0
     hardWin2Islands: 1
     hardWin3Islands: 0
-    hardWin4Islands: 0
+    hard4Win4Islands: 0
   inventory:
   - {fileID: 11400000, guid: 32e5c44b05137624eba31e2189664d8c, type: 2}
   - {fileID: 11400000, guid: ec644530030079a42b4f36fe31f15560, type: 2}

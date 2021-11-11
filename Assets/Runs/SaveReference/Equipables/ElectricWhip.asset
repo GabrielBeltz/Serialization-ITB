@@ -27,6 +27,7 @@ MonoBehaviour:
     type: 1
     cost: 3
     description: Deals +1 damage to all affected tiles.
+  equipableType: 1
   uses: 0
   damage:
     value: 2

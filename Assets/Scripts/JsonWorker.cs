@@ -7,11 +7,20 @@ using System.IO;
 public class JsonWorker : MonoBehaviour
 {
     public GameInfoSetter gameInfo;
+    public Run save;
+    [Header("Squad")]
+    public Equipable[] equipped;
+    public Pilot[] equippedPilots;
+    public Weapon[] equippedWeapons;
+    public Passive[] equippedPassives;
+    [Header("Inventory")]
     public StorageItem[] storageItems;
     public Pilot[] storagePilots;
     public Weapon[] storageWeapons;
     public Passive[] storagePassives;
-    public Run save;
+    public Pilot emptyPilot;
+    public StorageItem emptyStorageItem;
+    public Equipable emptyEquipable;
     Run tempRun;
     string pDataP;
 
@@ -23,8 +32,17 @@ public class JsonWorker : MonoBehaviour
 
     public void LoadSave()
     {
+        if (!File.Exists($"{pDataP}/Run.json"))
+        {
+            return;
+        }
+
+        save.selectedSquad = new Squad();
+
         JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Run.json"), tempRun);
-        save.inventory.Clear();
+        JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Run.json"), save);
+
+        ClearInventory();
 
         // Load Inventário
         for (int i = 0; i < tempRun.inventory.Count; i++)
@@ -44,27 +62,63 @@ public class JsonWorker : MonoBehaviour
                     JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/InventoryItem{i}.json"), storageWeapons[i]);
                     storageItems[i] = storageWeapons[i];
                     break;
-                default:
-                    break;
             }
+
+            save.inventory[i] = storageItems[i];
+        }
+
+        for (int i = 0; i < tempRun.selectedSquad.Mechs.Length; i++)
+        {
+            JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Mech{i}Pilot.json"), equippedPilots[i]);
+            save.selectedSquad.Mechs[i].pilot = equippedPilots[i];
+
+            for (int j = 0; j < tempRun.selectedSquad.Mechs[i].mechEquip.Length; j++)
+            {
+                if (!File.Exists($"{pDataP}/Mech{i}Equipable{j}.json"))
+                {
+                    continue;
+                }
+                JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Mech{i}Equipable{j}.json"), equipped[i]);
+                switch (equipped[i].equipableType)
+                {
+                    case EquipableType.Passive:
+                        JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Mech{i}Equipable{j}.json"), equippedPassives[j]);
+                        save.selectedSquad.Mechs[i].mechEquip[j] = equippedPassives[j];
+                        break;
+                    case EquipableType.Weapon:
+                        JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Mech{i}Equipable{j}.json"), equippedWeapons[j]);
+                        save.selectedSquad.Mechs[i].mechEquip[j] = equippedWeapons[j];
+                        break;
+                }
+            }
+        }
+    }
+
+    void ClearInventory()
+    {
+        save.inventory.Clear();
+        for (int i = 0; i < 9; i++)
+        {
+            save.inventory.Add(emptyStorageItem);
+        }
+    }
+
+    void ClearMechEquipped()
+    {
+        foreach (Mech mech in save.selectedSquad.Mechs)
+        {
+            mech.mechEquip = new Equipable[] { emptyEquipable, emptyEquipable };
         }
     }
 
     public void SaveSave()
     {
-        //string json = JsonUtility.ToJson(gameInfo.baseRunToSave, true);
-        //string dataPath = Application.persistentDataPath + "/IntoTheBreach Save.json";
-        //StreamWriter sw =  File.CreateText(dataPath);
-        //sw.Close();
-        //File.WriteAllText(dataPath, json);
-
         SaveRun(gameInfo.baseRunToSave);
 
         for (int i = 0; i < gameInfo.baseRunToSave.selectedSquad.Mechs.Length; i++)
         {
 
             // Salvando informações dos Mechs
-            SaveMech(gameInfo.baseRunToSave.selectedSquad.Mechs[i], i);
             SaveMechPilot(gameInfo.baseRunToSave.selectedSquad.Mechs[i].pilot, i);
 
             // Armas e Passivas dos Mechs
@@ -103,15 +157,6 @@ public class JsonWorker : MonoBehaviour
     {
         string json = JsonUtility.ToJson(run, true);
         string dataPath = $"{pDataP}/Run.json";
-        StreamWriter sw = File.CreateText(dataPath);
-        sw.Close();
-        File.WriteAllText(dataPath, json);
-    }
-
-    void SaveMech(Mech mech, int i)
-    {
-        string json = JsonUtility.ToJson(mech, true);
-        string dataPath = $"{pDataP}/Mech{i}.json";
         StreamWriter sw = File.CreateText(dataPath);
         sw.Close();
         File.WriteAllText(dataPath, json);

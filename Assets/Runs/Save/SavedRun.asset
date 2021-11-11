@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe579121839f37b4cb1ebe855a136be9, type: 3}
-  m_Name: '- Run - Empty'
+  m_Name: SavedRun
   m_EditorClassIdentifier: 
   selectedSquad:
     type: 0
@@ -26,9 +26,9 @@ MonoBehaviour:
       extraMove: 0
       fireImmunity: 0
       mechEquip:
-      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
-      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
-      pilot: {fileID: 11400000, guid: d8e21e343227b3b46bb55802d5e9a8a7, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      pilot: {fileID: 0}
     - name: 
       category: 0
       baseHP: 0
@@ -37,9 +37,9 @@ MonoBehaviour:
       extraMove: 0
       fireImmunity: 0
       mechEquip:
-      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
-      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
-      pilot: {fileID: 11400000, guid: d8e21e343227b3b46bb55802d5e9a8a7, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      pilot: {fileID: 0}
     - name: 
       category: 0
       baseHP: 0
@@ -48,9 +48,9 @@ MonoBehaviour:
       extraMove: 0
       fireImmunity: 0
       mechEquip:
-      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
-      - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
-      pilot: {fileID: 11400000, guid: d8e21e343227b3b46bb55802d5e9a8a7, type: 2}
+      - {fileID: 0}
+      - {fileID: 0}
+      pilot: {fileID: 0}
     easyWin2Islands: 0
     easyWin3Islands: 0
     easyWin4Islands: 0
@@ -59,9 +59,8 @@ MonoBehaviour:
     mediumWin4Islands: 0
     hardWin2Islands: 0
     hardWin3Islands: 0
-    hardWin4Islands: 0
-  inventory:
-  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+    hard4Win4Islands: 0
+  inventory: []
   savedPeople: 0
   gridPower: 0
   reputation: 0

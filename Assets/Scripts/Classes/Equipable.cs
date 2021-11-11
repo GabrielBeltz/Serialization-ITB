@@ -9,6 +9,7 @@ public class Equipable : StorageItem
     public int power;
     public string description;
     public EquipableUpgrade upgrade1, upgrade2;
+    public EquipableType equipableType;
 }
 
 [System.Serializable]
@@ -24,6 +25,11 @@ public class EquipableUpgrade
         this.cost = cost;
         this.type = type;
     }
+}
+
+public enum EquipableType
+{
+    Passive, Weapon
 }
 
 public enum UpgradeTypes

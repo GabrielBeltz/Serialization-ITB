@@ -480,7 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rustingHulks: 1
-  baseRunToSave: {fileID: 11400000, guid: d4d935d43e829334898c0f47f7325bb9, type: 2}
+  RustingHulksRun: {fileID: 11400000, guid: d4d935d43e829334898c0f47f7325bb9, type: 2}
+  customRun: {fileID: 11400000, guid: 856a79ee6bc25c1419f411ca46bd784b, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +807,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameInfo: {fileID: 345039732}
+  save: {fileID: 11400000, guid: 45c0dbabd7328394e8dc722483a655b3, type: 2}
+  equipped:
+  - {fileID: 11400000, guid: f29aca4af0459eb4f9749ee01cae96df, type: 2}
+  - {fileID: 11400000, guid: c4978595442e8c445a3dd16bc20fdfe6, type: 2}
+  - {fileID: 11400000, guid: 9328a438bb35b0b4ba01faf03d3b5283, type: 2}
+  - {fileID: 11400000, guid: 169b34f3f5e45d441881dd29c1da92ad, type: 2}
+  - {fileID: 11400000, guid: c936d03966bb26f4882087e0b5d1c580, type: 2}
+  - {fileID: 11400000, guid: 593245ed22c6edc499a39499aed3999e, type: 2}
+  equippedPilots:
+  - {fileID: 11400000, guid: 1b8e1b756ee1176428e8c99c1be35338, type: 2}
+  - {fileID: 11400000, guid: c8c00dd5329619a4cae8b2398edb23d0, type: 2}
+  - {fileID: 11400000, guid: 64af98ae7c425c54d9f0e901e0ea5a66, type: 2}
+  equippedWeapons:
+  - {fileID: 11400000, guid: 16fa0bd09cca76c498474682ee9ef36b, type: 2}
+  - {fileID: 11400000, guid: 6d345b446327de04d81a11a5b647c2e2, type: 2}
+  - {fileID: 11400000, guid: e057fac2f98688341924ce5ea8a754cb, type: 2}
+  - {fileID: 11400000, guid: 4b040418e36ac224b977f9d8a35dd2b1, type: 2}
+  - {fileID: 11400000, guid: 2dd08cfc6fd49ae4eb83bfa5ad8ffee6, type: 2}
+  - {fileID: 11400000, guid: bf17115b7fd345f4f938935a28d6e5e0, type: 2}
+  equippedPassives:
+  - {fileID: 11400000, guid: 98ac13bbd3c0f2d4d8128392de7d2622, type: 2}
+  - {fileID: 11400000, guid: 7a9a7701e43ba2a4294d569b64430f9a, type: 2}
+  - {fileID: 11400000, guid: 937384e27190c5a4a9d538366760bd02, type: 2}
+  - {fileID: 11400000, guid: 0c009e66c2726304081251c5d11539df, type: 2}
+  - {fileID: 11400000, guid: 85025c6ca4e8efb43b34a74da2a191ee, type: 2}
+  - {fileID: 11400000, guid: 81ab493646cde964a8251cb61408b26e, type: 2}
   storageItems:
   - {fileID: 11400000, guid: 5e2e78440ad191f4684441580f7c811d, type: 2}
   - {fileID: 11400000, guid: 7505df7c5c4e67144add1c12f635d150, type: 2}
@@ -816,10 +843,39 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad7cbe711e83a504881b2639c40efe53, type: 2}
   - {fileID: 11400000, guid: ed7c51f537774d54c989d61a777ce194, type: 2}
   - {fileID: 11400000, guid: 6d60d70d520674049944dec9e351d8be, type: 2}
-  storagePilots: []
-  storageWeapons: []
-  storagePassives: []
-  save: {fileID: 11400000, guid: 856a79ee6bc25c1419f411ca46bd784b, type: 2}
+  storagePilots:
+  - {fileID: 11400000, guid: 779dffcebd1174e4688d444bae20405f, type: 2}
+  - {fileID: 11400000, guid: 65157b1d67ed89c4c8e458acd01bef66, type: 2}
+  - {fileID: 11400000, guid: b5009af00a9c53f42a80014073d2646f, type: 2}
+  - {fileID: 11400000, guid: f4a29f875a560024f80cffb3c56c113c, type: 2}
+  - {fileID: 11400000, guid: 95d563284c70bf6419d59bcbb7104b24, type: 2}
+  - {fileID: 11400000, guid: 33ecd989c49d7f248a5bcd1b43580a9f, type: 2}
+  - {fileID: 11400000, guid: c2075be14365201429a0a584fb6b437e, type: 2}
+  - {fileID: 11400000, guid: e0cfaa5828456aa4b98d5d681d4b4485, type: 2}
+  - {fileID: 11400000, guid: 2f9517d0baf0014408c1da6313a88e5e, type: 2}
+  storageWeapons:
+  - {fileID: 11400000, guid: 54620240cc3e84d48beb0ad07d71215e, type: 2}
+  - {fileID: 11400000, guid: a9af0627417d72f43ba2667889ed9331, type: 2}
+  - {fileID: 11400000, guid: ec5cec8537a66c84aac9bb062e952139, type: 2}
+  - {fileID: 11400000, guid: 2abd4b7c557c96a41b20680810d54ba9, type: 2}
+  - {fileID: 11400000, guid: 159bc7b1cc68ee84d9504bdc0b963108, type: 2}
+  - {fileID: 11400000, guid: bd118dc6131e37d488ad124daa6413c0, type: 2}
+  - {fileID: 11400000, guid: 407741a44810856479404370aa97b118, type: 2}
+  - {fileID: 11400000, guid: b682c2c4dd34e024e9cf57c0da10b7e1, type: 2}
+  - {fileID: 11400000, guid: 23ba1900f7b6892468a6ef010a134109, type: 2}
+  storagePassives:
+  - {fileID: 11400000, guid: c4d6742afd514544f9187bfcc300b531, type: 2}
+  - {fileID: 11400000, guid: 3caf0f434f9ae564db0c2a799b503832, type: 2}
+  - {fileID: 11400000, guid: 5ac18be4766edf14cbf3b78cf7fc70d7, type: 2}
+  - {fileID: 11400000, guid: cf2e4fdb7e13a064ba62203fc23b6df2, type: 2}
+  - {fileID: 11400000, guid: cf1865e72c70a84408e38bb204b81adb, type: 2}
+  - {fileID: 11400000, guid: 4240a79a9e85cbc44bfa42a3fdaa93a0, type: 2}
+  - {fileID: 11400000, guid: 419a87e170e1e0b4bb1936998eab187d, type: 2}
+  - {fileID: 11400000, guid: 4e404c9801a548547ac423fffe31e596, type: 2}
+  - {fileID: 11400000, guid: 547c8eded186a074091a74d9d0298759, type: 2}
+  emptyPilot: {fileID: 11400000, guid: d8e21e343227b3b46bb55802d5e9a8a7, type: 2}
+  emptyStorageItem: {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+  emptyEquipable: {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
 --- !u!4 &1704939726
 Transform:
   m_ObjectHideFlags: 0

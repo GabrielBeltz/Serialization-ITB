@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ae2bdcdb75f9747b3d07977a737938, type: 3}
-  m_Name: SelfDestruct
+  m_Script: {fileID: 11500000, guid: b3ae3fe40116d614089bfec4a202a5cf, type: 3}
+  m_Name: New Equipable 2
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  storageType: 2
+  storageType: 0
   active: 0
   power: 0
-  description: 'Mech explodes, killing self and anything adjacent to Mech.  Single-use. '
+  description: 
   upgrade1:
     active: 0
     type: 0
@@ -27,9 +27,3 @@ MonoBehaviour:
     type: 0
     cost: 0
     description: 
-  equipableType: 1
-  uses: 0
-  damage:
-    value: 0
-    type: 0
-  type: 57

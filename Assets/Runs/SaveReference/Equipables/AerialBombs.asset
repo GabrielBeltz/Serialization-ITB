@@ -27,6 +27,7 @@ MonoBehaviour:
     type: 8
     cost: 2
     description: Allows jumping over and attacking an additional target.
+  equipableType: 1
   uses: -1
   damage:
     value: 0

@@ -59,11 +59,17 @@ MonoBehaviour:
     mediumWin4Islands: 0
     hardWin2Islands: 0
     hardWin3Islands: 0
-    hardWin4Islands: 0
+    hard4Win4Islands: 0
   inventory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 779dffcebd1174e4688d444bae20405f, type: 2}
+  - {fileID: 11400000, guid: 3caf0f434f9ae564db0c2a799b503832, type: 2}
+  - {fileID: 11400000, guid: ec5cec8537a66c84aac9bb062e952139, type: 2}
+  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
+  - {fileID: 11400000, guid: 2b817d37f00d6d24684a51b19207b0f5, type: 2}
   savedPeople: 0
   gridPower: 0
   reputation: 0

@@ -10,26 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8ae2bdcdb75f9747b3d07977a737938, type: 3}
-  m_Name: Repulse
+  m_Name: New Weapon 4
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  storageType: 2
-  active: 1
+  storageType: 0
+  active: 0
   power: 0
-  description: Push all adjacent tiles.
+  description: 
   upgrade1:
-    active: 1
-    type: 19
-    cost: 1
-    description: Creates a personal Shield when used.
+    active: 0
+    type: 0
+    cost: 0
+    description: 
   upgrade2:
     active: 0
-    type: 13
-    cost: 2
-    description: Shield adjacent ally or Building.
-  equipableType: 1
-  uses: -1
+    type: 0
+    cost: 0
+    description: 
+  uses: 0
   damage:
     value: 0
     type: 0
-  type: 44
+  type: 0

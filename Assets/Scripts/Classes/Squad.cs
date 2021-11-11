@@ -14,7 +14,7 @@ public class Squad
     //Wins
     public bool easyWin2Islands, easyWin3Islands, easyWin4Islands;
     public bool mediumWin2Islands, mediumWin3Islands, mediumWin4Islands;
-    public bool hardWin2Islands, hardWin3Islands, hardWin4Islands;
+    public bool hardWin2Islands, hardWin3Islands, hard4Win4Islands;
 }
 
 public enum SquadType
