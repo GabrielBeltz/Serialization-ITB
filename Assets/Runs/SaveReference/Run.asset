@@ -64,8 +64,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 32e5c44b05137624eba31e2189664d8c, type: 2}
   - {fileID: 11400000, guid: ec644530030079a42b4f36fe31f15560, type: 2}
   - {fileID: 11400000, guid: e23fb07d84abe5a4e8424e533aa42843, type: 2}
-  savedPeople: 0
-  gridPower: 0
-  reputation: 0
-  reactor: 0
-  coins: 0
+  savedPeople: 9251
+  gridPower: 6
+  reputation: 2
+  reactor: 1
+  coins: 4

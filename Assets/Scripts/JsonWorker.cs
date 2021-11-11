@@ -47,6 +47,12 @@ public class JsonWorker : MonoBehaviour
         // Load Inventário
         for (int i = 0; i < tempRun.inventory.Count; i++)
         {
+            if (!File.Exists($"{pDataP}/InventoryItem{i}.json"))
+            {
+                i = tempRun.inventory.Count;
+                break;
+            }
+
             JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/InventoryItem{i}.json"), storageItems[i]);
             switch (storageItems[i].storageType)
             {
@@ -69,8 +75,11 @@ public class JsonWorker : MonoBehaviour
 
         for (int i = 0; i < tempRun.selectedSquad.Mechs.Length; i++)
         {
-            JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Mech{i}Pilot.json"), equippedPilots[i]);
-            save.selectedSquad.Mechs[i].pilot = equippedPilots[i];
+            if (File.Exists($"{pDataP}/Mech{i}Pilot.json"))
+            {
+                JsonUtility.FromJsonOverwrite(File.ReadAllText($"{pDataP}/Mech{i}Pilot.json"), equippedPilots[i]);
+                save.selectedSquad.Mechs[i].pilot = equippedPilots[i];
+            }
 
             for (int j = 0; j < tempRun.selectedSquad.Mechs[i].mechEquip.Length; j++)
             {
