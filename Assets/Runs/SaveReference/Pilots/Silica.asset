@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: Silica
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
+  storageType: 0
   totalXP: 75
   pilotLevelUp1: 4
   pilotLevelUp2: 3
   specialSkill: 12
+  savedInfo:
+    unlocked: 1
+    baseName: Silica
+    battles: 8
+    timeJumps: 0
+    totalKills: 14
+    totalDeaths: 0

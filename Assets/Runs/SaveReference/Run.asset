@@ -13,9 +13,24 @@ MonoBehaviour:
   m_Name: Run
   m_EditorClassIdentifier: 
   selectedSquad:
-    type: 1
-    price: 4
-    unlocked: 0
+    savingInfo:
+      baseType: 1
+      price: 0
+      totalGames: 0
+      score: 9251
+      totalKills: 0
+      easyWin2Islands: 0
+      easyWin3Islands: 0
+      easyWin4Islands: 0
+      mediumWin2Islands: 0
+      mediumWin3Islands: 0
+      mediumWin4Islands: 0
+      hardWin2Islands: 0
+      hardWin3Islands: 0
+      hardWin4Islands: 0
+      win2Islands: 0
+      win3Islands: 0
+      win4Islands: 0
     color: {r: 0, g: 0, b: 0, a: 0}
     Mechs:
     - name: Rocket Mech
@@ -51,15 +66,6 @@ MonoBehaviour:
       - {fileID: 11400000, guid: cde1ce9712d47d14bae43456f797d0f7, type: 2}
       - {fileID: 11400000, guid: 1b5365cb40cf48b4892a3413108b7b7a, type: 2}
       pilot: {fileID: 11400000, guid: 9744722d02ea1c8458890314965b39ca, type: 2}
-    easyWin2Islands: 1
-    easyWin3Islands: 1
-    easyWin4Islands: 1
-    mediumWin2Islands: 1
-    mediumWin3Islands: 1
-    mediumWin4Islands: 0
-    hardWin2Islands: 1
-    hardWin3Islands: 0
-    hard4Win4Islands: 0
   inventory:
   - {fileID: 11400000, guid: 32e5c44b05137624eba31e2189664d8c, type: 2}
   - {fileID: 11400000, guid: ec644530030079a42b4f36fe31f15560, type: 2}
@@ -69,3 +75,342 @@ MonoBehaviour:
   reputation: 2
   reactor: 1
   coins: 4
+  win2Islands: 5
+  win3Islands: 1
+  win4Islands: 1
+  timelinesLost: 25
+  totalGames: 32
+  totalTimeTravelers: 22
+  totalEnemiesKilled: 1698
+  totalSavedCivilians: 99999
+  totalIslandsSecured: 31
+  podsCollected: 42
+  timeTravellers:
+  - baseName: Ralph Karlsson
+    unlocked: 1
+    battles: 30
+    timeJumps: 3
+    totalKills: 78
+    totalDeaths: 1
+  - baseName: Camila Vera
+    unlocked: 1
+    battles: 73
+    timeJumps: 4
+    totalKills: 82
+    totalDeaths: 1
+  - baseName: Lily Reed
+    unlocked: 1
+    battles: 24
+    timeJumps: 2
+    totalKills: 43
+    totalDeaths: 0
+  - baseName: Gana
+    unlocked: 1
+    battles: 26
+    timeJumps: 1
+    totalKills: 26
+    totalDeaths: 0
+  - baseName: Archimedes
+    unlocked: 1
+    battles: 4
+    timeJumps: 0
+    totalKills: 4
+    totalDeaths: 0
+  - baseName: Isaac Jones
+    unlocked: 1
+    battles: 4
+    timeJumps: 0
+    totalKills: 1
+    totalDeaths: 0
+  - baseName: Henry Kwan
+    unlocked: 0
+    battles: 13
+    timeJumps: 1
+    totalKills: 42
+    totalDeaths: 0
+  - baseName: Bethany Jones
+    unlocked: 1
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  - baseName: Silica
+    unlocked: 1
+    battles: 37
+    timeJumps: 3
+    totalKills: 96
+    totalDeaths: 0
+  - baseName: Prospero
+    unlocked: 1
+    battles: 1
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  - baseName: Abe Isamu
+    unlocked: 1
+    battles: 45
+    timeJumps: 2
+    totalKills: 103
+    totalDeaths: 0
+  - baseName: Chen Rong
+    unlocked: 1
+    battles: 52
+    timeJumps: 4
+    totalKills: 103
+    totalDeaths: 2
+  - baseName: Harold Schmidt
+    unlocked: 0
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  - baseName: Kazaaakpleth
+    unlocked: 0
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  - baseName: Mafan
+    unlocked: 0
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  - baseName: Ariadne
+    unlocked: 0
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  - baseName: Cyborg Pilot
+    unlocked: 0
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
+  squads:
+  - baseType: 0
+    price: 0
+    totalGames: 8
+    score: 12281
+    totalKills: 389
+    easyWin2Islands: 1
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 0
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 1
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 1
+    price: 0
+    totalGames: 8
+    score: 20703
+    totalKills: 626
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 1
+    mediumWin3Islands: 0
+    mediumWin4Islands: 1
+    hardWin2Islands: 0
+    hardWin3Islands: 1
+    hardWin4Islands: 0
+    win2Islands: 1
+    win3Islands: 1
+    win4Islands: 1
+  - baseType: 2
+    price: 0
+    totalGames: 7
+    score: 9635
+    totalKills: 321
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 1
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 1
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 3
+    price: 0
+    totalGames: 3
+    score: 9182
+    totalKills: 172
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 1
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 1
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 4
+    price: 0
+    totalGames: 4
+    score: 9217
+    totalKills: 148
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 1
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 1
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 0
+    price: 0
+    totalGames: 2
+    score: 8292
+    totalKills: 114
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 0
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 0
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 6
+    price: 0
+    totalGames: 0
+    score: 0
+    totalKills: 0
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 0
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 0
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 7
+    price: 6
+    totalGames: 0
+    score: 0
+    totalKills: 0
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 0
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 0
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 9
+    price: 0
+    totalGames: 0
+    score: 0
+    totalKills: 0
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 0
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 0
+    win3Islands: 0
+    win4Islands: 0
+  - baseType: 10
+    price: 0
+    totalGames: 0
+    score: 0
+    totalKills: 0
+    easyWin2Islands: 0
+    easyWin3Islands: 0
+    easyWin4Islands: 0
+    mediumWin2Islands: 0
+    mediumWin3Islands: 0
+    mediumWin4Islands: 0
+    hardWin2Islands: 0
+    hardWin3Islands: 0
+    hardWin4Islands: 0
+    win2Islands: 0
+    win3Islands: 0
+    win4Islands: 0
+  wateryGrave: 1
+  rammingSpeed: 0
+  islandSecure: 1
+  getOverHere: 1
+  glitteringCBeam: 1
+  shieldMastery: 1
+  unbreakable: 0
+  unwittingAllies: 0
+  massDisplacement: 1
+  cryoExpert: 0
+  trickShot: 0
+  pacifist: 0
+  overpowered: 1
+  stormyWeather: 1
+  perfectBattle: 1
+  chainAttack: 1
+  lightningWar: 0
+  holdTheLine: 0
+  quantumEntanglement: 1
+  scorchedEarth: 1
+  thisIsFine: 1
+  healing: 0
+  immortal: 0
+  overkill: 0
+  lootBoxes: 0
+  luckyStart: 0
+  changeTheOdds: 0
+  mechSpecialist: 0
+  classSpecialist: 0
+  flightSpecialist: 0
+  victory: 1
+  hardVictory: 1
+  adaptableVictory: 1
+  squadsVictory: 1
+  completeVictory: 0
+  emergingTechnologies: 1
+  friendsInHighPlaces: 1
+  immovableObjects: 1
+  hummanitysSavior: 1
+  perfectStrategy: 1
+  perfectIsland: 1
+  theDefenders: 1
+  untouchable: 0
+  backupBatteries: 0
+  goodSamaritan: 1
+  fieldPromotion: 1
+  bestOfTheBest: 1
+  comeTogether: 1
+  imGettingTooOldForThis: 0
+  distantFriends: 0
+  sustainableEnergy: 0
+  engeneeringDropout: 0
+  chronophobia: 0
+  thereIsNoTry: 0
+  trustedEquipment: 0

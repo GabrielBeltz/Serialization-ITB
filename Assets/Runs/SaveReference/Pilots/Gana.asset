@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: Gana
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
+  storageType: 0
   totalXP: 40
   pilotLevelUp1: 1
   pilotLevelUp2: 0
   specialSkill: 6
+  savedInfo:
+    unlocked: 1
+    baseName: Gana
+    battles: 0
+    timeJumps: 0
+    totalKills: 0
+    totalDeaths: 0
